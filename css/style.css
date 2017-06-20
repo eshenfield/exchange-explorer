@@ -1,0 +1,156 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 400px;
+  height: 100%;
+}
+
+body {
+  font: 14px/1 'Lato', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 25px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+main {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 25px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+.tab-header {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.tab-header:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+}
+
+table {
+  border: 1px solid gainsboro;
+  width: 100%;
+  padding: 10px;
+}
+
+td, th {
+  padding-top: 15px;
+  text-align: left;
+}
+
+td#status {
+  width: 250px;
+}
+
+td.has-icon {
+  padding: 0;
+  padding-left: 20px;
+}
+
+img.icon {
+  width: 21px;
+  height: 21px;
+}
+
+/**
+ * (C)Leanest CSS spinner ever
+ */
+
+@keyframes spin {
+  to { transform: rotate(1turn); }
+}
+
+.progress {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  margin: 0 .5em;
+  font-size: 12px;
+  text-indent: 999em;
+  overflow: hidden;
+  animation: spin 1s infinite steps(8);
+}
+
+.small.progress {
+  font-size: 3px;
+}
+
+.progress:before,
+.progress:after,
+.progress > div:before,
+.progress > div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.25em; /* (container width - part width)/2  */
+  width: .5em;
+  height: 1.5em;
+  border-radius: .2em;
+  background: #eee;
+  box-shadow: 0 3.5em #eee; /* container height - part height */
+  transform-origin: 50% 2.5em; /* container height / 2 */
+}
+
+.progress:before {
+  background: #555;
+}
+
+.progress:after {
+  transform: rotate(-45deg);
+  background: #777;
+}
+
+.progress > div:before {
+  transform: rotate(-90deg);
+  background: #999;
+}
+
+.progress > div:after {
+  transform: rotate(-135deg);
+  background: #bbb;
+}

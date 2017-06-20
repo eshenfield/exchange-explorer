@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lever Exchange Explorer</title>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Exchange explorer</h1>
+    <main>
+      <input id="tab1" class="tab-header" type="radio" name="tabs" checked>
+      <label for="tab1">Check Exchange status</label>
+
+      <input id="tab2" class="tab-header" type="radio" name="tabs">
+      <label for="tab2">Other resources</label>
+
+      <section id="content1">
+        <table>
+          <th>
+            <h3 id="domain-name"></h3>
+          </th>
+          <th></th>
+          <tr>
+            <td id="status"></td>
+            <td id="status-icon" class="has-icon"></td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="content2">
+        <p>So, you're not sure about a company's Exchange setup? Let's see what we can find!</p>
+        <ul>
+          <li>Resource 1</li>
+          <li>Resource 2</li>
+          <li>Resource 3</li>
+        </ul>
+      </section>
+
+    </main>
+  </body>
+</html>
+

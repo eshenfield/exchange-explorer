@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Exchange Explorer",
+  "description": "This extension does its best to determine what type of Exchange servers a domain is using",
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "img/outlook-lever-logo-small.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "https://dns-api.org/",
+    "activeTab"
+  ]
+}
