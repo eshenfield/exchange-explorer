@@ -110,8 +110,9 @@ td.has-icon {
 }
 
 img.icon {
-  width: 21px;
-  height: 21px;
+  width: 30px;
+  height: 30px;
+  vertical-align: super;
 }
 
 .helptext {
