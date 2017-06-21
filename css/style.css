@@ -15,6 +15,15 @@ body {
   background: #eee;
 }
 
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2B279C;
+}
+
 h1 {
   padding: 25px 0;
   font-weight: 400;
@@ -40,11 +49,11 @@ section {
   border-top: 1px solid #ddd;
 }
 
-.tab-header {
+.tab-header-input {
   display: none;
 }
 
-label {
+.tab-title {
   display: inline-block;
   margin: 0 0 -1px;
   padding: 15px 15px;
@@ -54,12 +63,12 @@ label {
   border: 1px solid transparent;
 }
 
-label:hover {
+.tab-title:hover {
   color: #888;
   cursor: pointer;
 }
 
-.tab-header:checked + label {
+.tab-header-input:checked + label {
   color: #555;
   border: 1px solid #ddd;
   border-top: 2px solid orange;
@@ -71,10 +80,19 @@ label:hover {
   display: block;
 }
 
-table {
+.tab-content {
   border: 1px solid gainsboro;
   width: 100%;
   padding: 10px;
+}
+
+.tab-content > ul {
+  margin-left: 10px;
+  list-style: none;
+}
+
+.tab-content > ul > li {
+  padding-top: 15px;
 }
 
 td, th {
@@ -94,6 +112,12 @@ td.has-icon {
 img.icon {
   width: 21px;
   height: 21px;
+}
+
+.helptext {
+  font: 11px 'Lato', sans-serif;
+  color: darkgray;
+  margin: 10px 0 5px 0;
 }
 
 /**

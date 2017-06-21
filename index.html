@@ -9,14 +9,14 @@
   <body>
     <h1>Exchange explorer</h1>
     <main>
-      <input id="tab1" class="tab-header" type="radio" name="tabs" checked>
-      <label for="tab1">Check Exchange status</label>
+      <input id="tab1" class="tab-header-input" type="radio" name="tabs" checked>
+      <label class="tab-title" for="tab1">Check Office 365 status</label>
 
-      <input id="tab2" class="tab-header" type="radio" name="tabs">
-      <label for="tab2">Other resources</label>
+      <input id="tab2" class="tab-header-input" type="radio" name="tabs">
+      <label class="tab-title" for="tab2">More resources</label>
 
       <section id="content1">
-        <table>
+        <table class="tab-content">
           <th>
             <h3 id="domain-name"></h3>
           </th>
@@ -29,12 +29,28 @@
       </section>
 
       <section id="content2">
-        <p>So, you're not sure about a company's Exchange setup? Let's see what we can find!</p>
-        <ul>
-          <li>Resource 1</li>
-          <li>Resource 2</li>
-          <li>Resource 3</li>
-        </ul>
+        <p>The results were inconclusive? Here are some articles that might help:</p>
+        <div class="tab-content">
+          <ul>
+            <li>
+              <a href="https://support.sanebox.com/hc/en-us/articles/203094756-Office-365-How-do-I-find-the-server-settings" target="_blank">
+              If you log in to Office 365 online
+              </a>
+            </li>
+            <li>
+              <a href="https://support.sanebox.com/hc/en-us/articles/203094396-How-do-I-find-my-email-server-settings" target="_blank">
+              For other email clients
+              </a>
+              <p class="helptext">Including Outlook for desktop, Mozilla Thunderbird, and more.</p>
+            </li>
+            <li>
+              <a href="https://technet.microsoft.com/en-us/library/o365e_hrcmoverequest_fl312271(v=exchg.150).aspx" target="_blank">
+              Recently migrated to Office 365
+              </a>
+              <p class="helptext">You'll need an Exchange admin for this step. Check <em>How do you know this worked?</em> at the bottom</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
     </main>

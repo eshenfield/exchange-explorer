@@ -77,6 +77,9 @@ function usingExchangeOnline(recordsMap) {
 function getExchangeType(domain, callback) {
   if (!domain) {return callback(new Error('Missing domain'))}
   getDNSRecords(domain, function(err, recordsMap){
+    if (err) {
+      return callback(err)
+    }
     if (usingExchangeOnline(recordsMap)) {
       return callback(null, 'online')
     } else {
@@ -98,7 +101,7 @@ function renderStatus(status) {
     statusText = '<p>You found one! This company uses Exchange online</p>'
   } else {
     statusIcon = '<img class="icon" src="img/question-icon.png">'
-    statusText = '<p>The answer is unclear. Check out the additional resources for more info!</p>'
+    statusText = '<p>This company may not use Office 365. Check out the additional resources for more info!</p>'
   }
 
   $('#status').html(statusText);
